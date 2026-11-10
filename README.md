@@ -6,7 +6,9 @@ Every package points at the same remote MCP server, `https://summitscribe.app/ap
 
 ## Before you install
 
-Create a token at [summitscribe.app](https://summitscribe.app) in Settings, under Developer & agents. Give it the `mcp:read` scope plus the data scopes you want (`meetings:read`, `notes:read`, `transcripts:read`, `actions:read`, `search:read`). Use a separate token for each tool so you can revoke one without breaking the others.
+Cursor and Gemini CLI sign you in through your browser the first time they connect. You approve the connection on summitscribe.app, pick which data it can read, and can disconnect it later in Account settings, then Developer & agents, under Connected apps. You don't need a token for them.
+
+For Claude Code, OpenClaw and the config snippets, create a token at [summitscribe.app](https://summitscribe.app) in Account settings, then Developer & agents. Give it the `mcp:read` scope plus the data scopes you want (`meetings:read`, `notes:read`, `transcripts:read`, `actions:read`, `search:read`). Use a separate token for each tool so you can revoke one without breaking the others.
 
 Keep the token in the tool's secret prompt or in the `SUMMITSCRIBE_TOKEN` environment variable. Don't paste it into a chat or commit it. If you think it leaked, revoke it at summitscribe.app.
 
@@ -23,7 +25,7 @@ Claude Code asks for your token when you enable the plugin and keeps it in secur
 
 **Cursor**
 
-Install SummitScribe from the Cursor Marketplace, or add this repository as a plugin source. Then set `SUMMITSCRIBE_TOKEN` under Plugins, Configure.
+Install SummitScribe from the Cursor Marketplace, or copy this repository's `cursor` folder to `~/.cursor/plugins/local/summitscribe` and run **Developer: Reload Window**. The first time Cursor connects, it opens summitscribe.app so you can approve it. Browser sign-in needs Cursor 3.26.13 or later, with port 8787 free. On older versions, add the server with a token instead, using the Cursor snippet at [summitscribe.app/developers/agents](https://summitscribe.app/developers/agents).
 
 **Gemini CLI**
 
@@ -31,7 +33,7 @@ Install SummitScribe from the Cursor Marketplace, or add this repository as a pl
 gemini extensions install https://github.com/timmyk31/summitscribe-agents
 ```
 
-Gemini asks for your token at install and keeps it in the system keychain.
+The first time Gemini connects, it opens summitscribe.app in your browser so you can approve it. Run `/mcp auth summitscribe` if it doesn't.
 
 Other tools (VS Code, Codex, OpenClaw, Hermes, Muse) need only a config snippet. See [summitscribe.app/developers/agents](https://summitscribe.app/developers/agents).
 

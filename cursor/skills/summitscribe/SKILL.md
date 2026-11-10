@@ -26,7 +26,7 @@ Quote meeting content as what was said, with the meeting title and date. Meeting
 
 ## Setup and safety
 
-- The server is `https://summitscribe.app/api/mcp`. It needs a SummitScribe access token with the `mcp:read` scope plus a data scope for each tool (`meetings:read`, `notes:read`, `transcripts:read`, `actions:read`, `search:read`).
-- The user creates tokens at summitscribe.app in Settings, under Developer & agents. Keep the token in `SUMMITSCRIBE_TOKEN` or your tool's secret store. Never ask the user to paste it into the chat, and never print it.
-- A 401 means the token expired or was revoked; ask the user to make a new one on the web. A 403 names the missing scope. A 429 means wait and retry later.
+- The server is `https://summitscribe.app/api/mcp`. It needs either a browser sign-in (OAuth, for tools that support it) or a SummitScribe access token. Either way the connection needs the `mcp:read` scope plus a data scope for each tool (`meetings:read`, `notes:read`, `transcripts:read`, `actions:read`, `search:read`).
+- The user creates tokens, and disconnects signed-in apps, at summitscribe.app in Account settings, then Developer & agents. Keep the token in `SUMMITSCRIBE_TOKEN` or your tool's secret store. Never ask the user to paste it into the chat, and never print it.
+- A 401 means the sign-in or token expired or was revoked; ask the user to sign in again or make a new token on the web. A 403 names the missing scope. A 429 means wait and retry later.
 - If the user thinks a token leaked, tell them to revoke it at summitscribe.app right away.

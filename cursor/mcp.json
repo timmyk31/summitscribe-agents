@@ -1,8 +1,7 @@
 {
   "mcpServers": {
     "summitscribe": {
-      "url": "https://summitscribe.app/api/mcp",
-      "headers": { "Authorization": "Bearer ${SUMMITSCRIBE_TOKEN}" }
+      "url": "https://summitscribe.app/api/mcp"
     }
   }
 }
