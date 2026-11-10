@@ -1,0 +1,20 @@
+{
+  "name": "summitscribe",
+  "version": "1.0.0",
+  "description": "Read your SummitScribe meeting notes, transcripts and action items. Read-only.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "summitscribe": {
+      "httpUrl": "https://summitscribe.app/api/mcp",
+      "headers": { "Authorization": "Bearer ${SUMMITSCRIBE_TOKEN}" }
+    }
+  },
+  "settings": [
+    {
+      "name": "SummitScribe token",
+      "description": "An access token from summitscribe.app (Settings, Developer & agents) with mcp:read and the data scopes you want.",
+      "envVar": "SUMMITSCRIBE_TOKEN",
+      "sensitive": true
+    }
+  ]
+}

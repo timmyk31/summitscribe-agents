@@ -1,0 +1,12 @@
+{
+  "name": "summitscribe",
+  "owner": { "name": "SummitScribe", "email": "info@summitscribe.app" },
+  "metadata": { "description": "SummitScribe plugins for Cursor" },
+  "plugins": [
+    {
+      "name": "summitscribe",
+      "source": "cursor",
+      "description": "Read your SummitScribe meeting notes, transcripts and action items. Read-only."
+    }
+  ]
+}

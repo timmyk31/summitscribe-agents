@@ -1,0 +1,21 @@
+{
+  "name": "summitscribe",
+  "description": "Read your SummitScribe meeting notes, transcripts and action items from Cursor. Read-only.",
+  "version": "1.0.0",
+  "author": { "name": "SummitScribe", "email": "info@summitscribe.app" },
+  "homepage": "https://summitscribe.app/developers/agents",
+  "repository": "https://github.com/timmyk31/summitscribe-agents",
+  "keywords": ["meetings", "notes", "transcripts", "mcp"],
+  "skills": "./skills/",
+  "variables": {
+    "type": "object",
+    "properties": {
+      "SUMMITSCRIBE_TOKEN": {
+        "type": "string",
+        "title": "SummitScribe token",
+        "description": "An access token from summitscribe.app (Settings, Developer & agents) with mcp:read and the data scopes you want."
+      }
+    },
+    "required": ["SUMMITSCRIBE_TOKEN"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "summitscribe": {
+      "type": "http",
+      "url": "https://summitscribe.app/api/mcp",
+      "headers": { "Authorization": "Bearer ${user_config.summitscribe_token}" }
+    }
+  }
+}
