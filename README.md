@@ -25,7 +25,7 @@ Claude Code asks for your token when you enable the plugin and keeps it in secur
 
 **Cursor**
 
-Install SummitScribe from the Cursor Marketplace, or copy this repository's `cursor` folder to `~/.cursor/plugins/local/summitscribe` and run **Developer: Reload Window**. The first time Cursor connects, it opens summitscribe.app so you can approve it. Browser sign-in needs Cursor 3.26.13 or later, with port 8787 free. On older versions, add the server with a token instead, using the Cursor snippet at [summitscribe.app/developers/agents](https://summitscribe.app/developers/agents).
+Install SummitScribe from the Cursor Marketplace, or copy this repository's `cursor` folder to `~/.cursor/plugins/local/summitscribe` and run **Developer: Reload Window**. The first time Cursor connects, it opens summitscribe.app so you can approve it. Browser sign-in needs port 8787 free. If it's busy, or sign-in fails, add the server with a token instead, using the Cursor snippet at [summitscribe.app/developers/agents](https://summitscribe.app/developers/agents).
 
 **Gemini CLI**
 
